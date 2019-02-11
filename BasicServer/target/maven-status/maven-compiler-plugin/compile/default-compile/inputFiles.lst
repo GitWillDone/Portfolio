@@ -1,0 +1,7 @@
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/Room.java
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/HTTPRequest.java
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/HTTPResponse.java
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/ServerUtil.java
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/BadRequestException.java
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/RegularResponse.java
+/Users/willdunn/GitWillDone/Computer_Programming/BasicServer/src/main/java/server/WebSocketResponse.java

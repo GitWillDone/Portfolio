@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="CSS/style.css" />
+<!-- This is the first HTML lab, and I will be trying to output Hellow World-->
+<head>
+<meta charset="UTF-8" />
+<title>Hellow World Test Webpage</title>
+</head>
+
+<body>
+    <div id="bg">
+    <p><font color="white"><b>Hellow world</b></font></p>
+    </div>
+    <p><font color="white">Hover over the div element below, to see the transition effect.</font></p>
+    <div class="motionBox">
+    </div>
+    <p><b><font color= "gray">You'll notice that it grows using a cubic-bezier</font></b></p>
+
+<div class="typewriter">
+        <h1><font color="white">Showing off the typewriter effect.</font></h1>
+      </div>
+      <ul><font color="white">
+          <li>This</li>
+          <li>is</li>
+          <li>a</li>
+          <li>list</li>
+      </font></ul>
+      <p><font color = "cyan">Click below if you want to access google</font></p>
+      <a href="htps://www.google.com">Da link</a>
+    </body>
+
+
+</html>
