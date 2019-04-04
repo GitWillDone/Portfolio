@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/willdunn/Portfolio/DiscreteEventSimulator/BankES.h
+iostream
+-
+string
+-
+vector
+-
+queue
+-
+unordered_map
+-
+
+/Users/willdunn/Portfolio/DiscreteEventSimulator/StoreES.cpp
+StoreES.h
+/Users/willdunn/Portfolio/DiscreteEventSimulator/StoreES.h
+
+/Users/willdunn/Portfolio/DiscreteEventSimulator/StoreES.h
+iostream
+-
+queue
+-
+
+/Users/willdunn/Portfolio/DiscreteEventSimulator/main.cpp
+StoreES.h
+/Users/willdunn/Portfolio/DiscreteEventSimulator/StoreES.h
+BankES.h
+/Users/willdunn/Portfolio/DiscreteEventSimulator/BankES.h
+
