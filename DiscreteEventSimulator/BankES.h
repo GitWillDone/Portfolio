@@ -4,31 +4,13 @@
 
 #pragma once
 
-#include <iostream>
+#include "businessHelps.hpp"
 #include <string>
 #include <vector>
 #include <queue>
 #include <unordered_map>
 
-// define the time data type
-#define TimeType int
-
-// define constants used in our simulation
-const int SIM_LENGTH = 43200; //12 hours
-#define NUM_TELLERS 6
-
-// define event types
-typedef enum {
-    ARRIVAL, DEPARTURE
-} EventType;
-
-// define an event struct to store events
-typedef struct {
-    TimeType eventTime;
-    TimeType duration;
-    EventType event;
-    TimeType waitTime;
-} EventStruct;
+// our Discrete Event Simulation class
 
 // a standard way of printing events
 void printEvent(const EventStruct &event) {
@@ -39,18 +21,6 @@ void printEvent(const EventStruct &event) {
     else std::cout << "DEPARTURE";
 }
 
-void printEventDurations(const EventStruct &event){
-
-}
-
-// how to compare event times for the priority queue
-struct compareEventTime {
-    bool operator()(const EventStruct &lhs, const EventStruct &rhs) const {
-        return lhs.eventTime > rhs.eventTime;
-    }
-};
-
-// our Discrete Event Simulation class
 class DESim {
 private:
     // event queue -- priority queue with events queued by event time
@@ -62,14 +32,17 @@ private:
     int tellersAvailable = NUM_TELLERS;
 public:
     void addEvent(EventStruct &event);
-
+    
     void addBankQueueCustomer(EventStruct &event);
-
+    
     void setDebugOn(bool value) { debugOn = value; };
-
+    
     void printTellerNumberChange();
-
+    
+    void addToTeller(std::vector<int> &durationCount, EventStruct &nextEvent);
+    
     void runSim();
+    
 }; // end DESim
 
 // add a priority queue event
@@ -100,11 +73,22 @@ void DESim::printTellerNumberChange() {
     }
 }
 
+//add person to a teller
+void DESim::addToTeller(std::vector<int> &durationCount,EventStruct &nextEvent){
+    durationCount.push_back(nextEvent.duration);
+    // enter departure event in eventQueue
+    nextEvent.eventTime = currentTime + nextEvent.duration;
+    nextEvent.event = DEPARTURE;
+    addEvent(nextEvent);
+    tellersAvailable--;
+    printTellerNumberChange();
+}
+
 // run the simulation
 void DESim::runSim() {
     std::vector<int> durationCount(eventQueue.size());
     int totalCustomers = 0;
-
+    
     while (!eventQueue.empty()) {
         EventStruct nextEvent = eventQueue.top(); // get next event in priority queue
         currentTime = nextEvent.eventTime;
@@ -113,13 +97,7 @@ void DESim::runSim() {
             case ARRIVAL:
                 totalCustomers++;
                 if (tellersAvailable) {
-                    durationCount.push_back(nextEvent.duration);
-                    // enter departure event in eventQueue
-                    nextEvent.eventTime = currentTime + nextEvent.duration;
-                    nextEvent.event = DEPARTURE;
-                    addEvent(nextEvent);
-                    tellersAvailable--;
-                    printTellerNumberChange();
+                    addToTeller(durationCount,nextEvent);
                 } else {
                     // no tellers available, put customer in bank queue
                     addBankQueueCustomer(nextEvent);
@@ -127,7 +105,7 @@ void DESim::runSim() {
                 break;
             case DEPARTURE:
                 if (!bankQueue.empty()) {
-//                    durationCount.push_back(nextEvent.duration); //todo this is wrong
+                    //                    durationCount.push_back(nextEvent.duration); //todo this is wrong
                     EventStruct nextCustomer = bankQueue.front();
                     bankQueue.pop();
                     nextCustomer.eventTime = currentTime + nextEvent.duration;
@@ -142,18 +120,19 @@ void DESim::runSim() {
                 std::cout << "ERROR: Should never get here! " << std::endl;
         }
     }
-
+    
     double totalTime, tenthPercentile, fiftiethPercentile, nintiethPercentile;
     int tenthOfTimeVec = durationCount.size() / 10;
     std::sort(durationCount.begin(), durationCount.end());
-
+    
     for (int i = 0; i < durationCount.size(); i++) {
         if(i <= tenthOfTimeVec) tenthPercentile += durationCount[i];
         else if (i >= durationCount.size() - tenthOfTimeVec) nintiethPercentile += durationCount[i];
         else fiftiethPercentile += durationCount[i];
         totalTime += durationCount[i];
     }
-
+    
+    
     std::cout << "BANK RESULTS:\n";
     std::cout << "Total Customers: " << totalCustomers << std::endl;
     std::cout << "Average Time (minutes): " << totalTime / (60 * totalCustomers) << std::endl;
