@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <!--Project Theme colors for consistency -->
+    <color name="LSA_green">#2B22d69d</color>
+    <color name="LSA_lightGreen">#64fa9d</color>
+    <color name="LSA_lightBlue">#8ccbf5</color>
+    <color name="LSA_black">#000000</color>
+
+
+    <!--Button colors -->
+    <color name="LSA_et_background">#1affffff</color>
+</resources>

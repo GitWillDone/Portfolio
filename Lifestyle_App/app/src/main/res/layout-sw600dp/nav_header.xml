@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/LSA_lightGreen"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <ImageView
+        android:id="@+id/iv_profile_image"
+        android:layout_width="125dp"
+        android:layout_height="116dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tv_Name_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_profile_image"
+        android:layout_marginTop="2dp"
+        android:paddingTop="8dp"
+        android:layout_marginLeft="32dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/LSA_black" />
+
+    <TextView
+        android:id="@+id/tv_age_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/iv_profile_image"
+        android:padding="4dp"
+        android:textColor="@color/LSA_black"
+        android:text="Age : lose weight"
+        />
+
+    <TextView
+        android:id="@+id/tv_weight_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/tv_age_output"
+        android:padding="4dp"
+        android:textColor="@color/LSA_black"
+        android:text="Weight : lose weight"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_height_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_age_output"
+        android:layout_toRightOf="@id/iv_profile_image"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="24dp"
+        android:padding="4dp"
+        android:textColor="@color/LSA_black"
+        android:text="Height : lose weight"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_goal_output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_weight_output"
+        android:layout_toRightOf="@+id/tv_height_output"
+        android:layout_marginRight="8dp"
+        android:padding="4dp"
+        android:textColor="@color/LSA_black"
+        android:text="Goal : lose weight"
+        />
+
+
+</RelativeLayout>

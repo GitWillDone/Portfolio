@@ -31,6 +31,9 @@ int main() {
         std::vector<Command> commands = getCommands(tokens);
         std::vector<pid_t> pids;
 
+//        std::string currDir = getcwd(NULL, 1024);
+//        std::cout << currDir;
+
         for (int i = 0; i < commands.size(); ++i) {
             if (commands[i].exec == "cd") {
                 if (commands[i].argv.size() == 2) {
@@ -72,5 +75,4 @@ int main() {
     }
     return 0;
 }
-
 

@@ -1,0 +1,3 @@
+/Users/willdunn/GitWillDone/Data_Analytics_and_Vis/Homeworks/Homework4/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/willdunn/GitWillDone/Data_Analytics_and_Vis/Homeworks/Homework4/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/willdunn/GitWillDone/Data_Analytics_and_Vis/Homeworks/Homework4/cmake-build-debug/CMakeFiles/Homework4.dir

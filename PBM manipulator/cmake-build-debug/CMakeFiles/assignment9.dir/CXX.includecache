@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/willdunn/GitWillDone/cs6015/assignment9/littleHuff.h
+string
+-
+
+/Users/willdunn/GitWillDone/cs6015/assignment9/main.cpp
+iostream
+-
+cstdint
+-
+optional
+-
+tuple
+-
+fstream
+-
+sys/stat.h
+-
+vector
+-
+map
+-
+string
+-
+littleHuff.h
+/Users/willdunn/GitWillDone/cs6015/assignment9/littleHuff.h
+

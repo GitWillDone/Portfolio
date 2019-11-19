@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lifestyle_App</string>
+
+    <!--below are the accessibility features to allow for the screen to read if a blind person is using the app-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

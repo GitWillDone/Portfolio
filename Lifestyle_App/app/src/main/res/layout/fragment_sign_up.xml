@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e6edee">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frag_signup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e6edee">
+
+
+        <Button
+            android:id="@+id/btn_submit_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:background="@drawable/life_style_app_mainpage_background"
+            android:padding="4dp"
+            android:text="Submit Profile Information"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_camera" />
+
+        <EditText
+            android:id="@+id/et_Name"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@color/LSA_green"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_info" />
+
+        <EditText
+            android:id="@+id/et_weight"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/LSA_green"
+            android:inputType="number"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/spinner_height" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/LSA_green"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/spinner_activity_level" />
+
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="40dp"
+            android:clickable="true"
+            android:src="@drawable/ic_add_a_photo_black_24dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_submit_profile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_password"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Spinner
+            android:id="@+id/spinner_Age"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@drawable/life_style_app_mainpage_background"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/et_Name" />
+
+        <Spinner
+            android:id="@+id/spinner_fitness_goal"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@drawable/life_style_app_mainpage_background"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/spinner_Age" />
+
+        <Spinner
+            android:id="@+id/spinner_height"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@drawable/life_style_app_mainpage_background"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/spinner_fitness_goal" />
+
+        <Spinner
+            android:id="@+id/spinner_sex"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@drawable/life_style_app_mainpage_background"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/et_weight" />
+
+        <Spinner
+            android:id="@+id/spinner_activity_level"
+            android:layout_width="248dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/spinner_bg"
+            android:popupBackground="@drawable/life_style_app_mainpage_background"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toBottomOf="@id/spinner_sex" />
+
+        <TextView
+            android:id="@+id/tv_profile_info"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="PROFILE INFO"
+            android:textSize="25dp"
+            app:layout_constraintEnd_toStartOf="@id/login_margin_left"
+            app:layout_constraintStart_toStartOf="@id/login_margin_right"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Name"
+            app:layout_constraintBottom_toBottomOf="@id/et_Name"
+            app:layout_constraintStart_toStartOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_info" />
+
+        <TextView
+            android:id="@+id/tv_Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Age"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_Age"
+            app:layout_constraintStart_toStartOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_Name"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_fitness_goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Fitness Goal"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_fitness_goal"
+            app:layout_constraintStart_toStartOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Age" />
+
+        <TextView
+            android:id="@+id/tv_Height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Height"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_height"
+            app:layout_constraintStart_toStartOf="@id/login_margin_left" />
+
+        <TextView
+            android:id="@+id/tv_Weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Weight"
+            app:layout_constraintBottom_toBottomOf="@id/et_weight"
+            app:layout_constraintStart_toStartOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Height" />
+
+        <TextView
+            android:id="@+id/tv_Sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Sex"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_sex"
+            app:layout_constraintStart_toStartOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Weight" />
+
+        <TextView
+            android:id="@+id/tv_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Activity Level"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_activity_level"
+            app:layout_constraintLeft_toRightOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_Sex" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Password"
+            app:layout_constraintBottom_toBottomOf="@id/et_password"
+            app:layout_constraintLeft_toRightOf="@id/login_margin_left"
+            app:layout_constraintTop_toBottomOf="@id/tv_activity" />
+
+        <View
+            android:id="@+id/break1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="36dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/tv_password" />
+
+        <View
+            android:id="@+id/break2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@id/tv_profile_info" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/login_margin_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="28dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/login_margin_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="30dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

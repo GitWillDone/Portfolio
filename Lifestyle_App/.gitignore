@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches/build_file_checksums.ser
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+access_key.txt
+secret_key.txt
+/data/user/0/com.example.willdunn.lifestyle_app/files/access_key.txt
+/data/user/0/com.example.willdunn.lifestyle_app/files/secret_key.txt

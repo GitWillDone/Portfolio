@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_bmi"
+            android:icon="@drawable/ic_bmi_module_24dp"
+            android:title="BMI" />
+
+        <item
+            android:id="@+id/nav_hikes"
+            android:icon="@drawable/ic_hikes_module_24dp"
+            android:title="Hikes" />
+
+        <item
+            android:id="@+id/nav_fitness_regimen"
+            android:icon="@drawable/ic_fitness_module_24dp"
+            android:title="Regimen" />
+
+        <item
+            android:id="@+id/nav_weather"
+            android:icon="@drawable/ic_weather_module_24dp"
+            android:title="Weather" />
+        <item
+            android:id="@+id/nav_edit_profile"
+            android:icon="@drawable/ic_profile_module_24dp"
+            android:title="Edit Profile" />
+        <item
+            android:id="@+id/nav_step_counter"
+            android:icon="@drawable/ic_directions_walk_black_24dp"
+            android:title="Step Counter" />
+    </group>
+
+</menu>
