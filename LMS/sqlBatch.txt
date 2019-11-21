@@ -1,0 +1,130 @@
+//start with the Users table
+create table Users(
+       uID int(8) auto_increment Primary Key,
+       fName varchar(100),
+       lName varchar(100),
+       DOB Date
+);
+
+
+Create table Students(
+	student_uID int(8) references Users(uID)
+	on delete restrict
+	on update cascade,
+	Subject varchar(4) not null references Departments(Subject)
+	on delete restrict
+	on update cascade,
+	fName varchar(100),
+      	lName varchar(100),
+       	DOB Date,
+	Primary Key(student_uID)
+);
+
+Create table Professors(
+	professor_uID int(8) references Users(uID),
+	Subject varchar(4) not null references Departments(Subject)
+	on delete restrict
+	on update cascade,
+	fName varchar(100),
+      	Name varchar(100),
+     	DOB Date,
+	Primary Key(professor_uID)
+);
+
+Create table Administrators(
+	administrator_uID int(8) references Users(uID)
+	on delete restrict
+	on update cascade,
+	fName varchar(100),
+       	lName varchar(100),
+       	DOB Date,
+	Primary Key(administrator_uID)
+);
+
+//create the Submission table
+create table Submission (
+	student_uID int(8) references Students(student_uID)
+	on delete restrict
+	on update cascade,
+	aID varchar(100),
+	Score int(3) unsigned,
+	Contents varchar(8192),
+	Time Date,
+	primary key (student_uID, aID)
+);
+
+
+//create the Enrolled table - todo needs alteration for M:M relationship
+Create table Enrolled(
+	Grade varchar(2),	
+	student_uID int(8) references Students(student_uID)
+	on delete restrict
+	on update cascade,
+	Semester varchar(10) references Classes(Semester)
+	on delete restrict
+	on update cascade,
+	CatalogID varchar(100) references Courses(CatalogID)
+	on delete restrict
+	on update cascade
+);
+
+
+//create the Departments table
+Create table Departments(
+	Name varchar(100),
+	Subject varchar(4) primary key
+
+);
+
+
+//create the Assignments table
+Create table Assignments(
+	Name varchar(100),
+	Contents varchar(8192),
+	Due Date,
+	aID varchar(100) primary key,
+	Points int(5) unsigned,
+	acName varchar(100) references AssignmentCatagories(Name)
+	on delete restrict
+	on update cascade
+);
+
+
+//create the AssignmentCatagories table
+Create table AssignmentCatagories(
+	Name varchar(100) primary key references Assignments(Name)
+	On Delete cascade
+	On Update cascade ,
+	Weight int(3) unsigned,
+	cID varchar(100) not null references Classes(cID)
+	on delete restrict
+	on update cascade
+
+);
+
+
+//create the Courses table
+Create table Courses(
+	Name varchar(100),
+	Num int(4) unsigned,
+	CatalogID int(5) unsigned primary key
+);
+
+//create the Classes table
+Create table Classes(
+	cID varchar(100),
+	Loc varchar(100),
+	Start Date,
+	End Date,
+	Semester varchar(10) UNIQUE,
+	CatalogID int(5) unsigned not null unique references Courses(CatalogID) 
+	on delete restrict
+	on update cascade,
+	professor_uID int(8) references Users(uID)
+	on delete restrict
+	on update cascade,
+	Subject varchar(4) not null references Departments(Subject)
+	on delete restrict
+	on update cascade,
+	Primary Key (cID)
+);
