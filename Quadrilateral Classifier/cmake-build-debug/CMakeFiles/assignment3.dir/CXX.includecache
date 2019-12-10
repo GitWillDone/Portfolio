@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/willdunn/GitWillDone/cs6015/assignment3/FilterFunctions.h
+vector
+-
+
+/Users/willdunn/GitWillDone/cs6015/assignment3/ParallelAndCongruentFunctions.h
+vector
+-
+cmath
+-
+iostream
+-
+
+/Users/willdunn/GitWillDone/cs6015/assignment3/main.cpp
+iostream
+-
+vector
+-
+string
+-
+ParallelAndCongruentFunctions.h
+/Users/willdunn/GitWillDone/cs6015/assignment3/ParallelAndCongruentFunctions.h
+FilterFunctions.h
+/Users/willdunn/GitWillDone/cs6015/assignment3/FilterFunctions.h
+
