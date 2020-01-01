@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e863503a-9abf-41b7-a415-b8d22fd6ff0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/chatUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/chatUtil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/example.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/HTTPRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HTTPRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/server/HTTPResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/HTTPResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/server/ServerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/server/ServerUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/server/HTTPRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/HTTPRequest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/server/HTTPResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/HTTPResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/RegularResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/RegularResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/Room.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/server/ServerUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/ServerUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/server/WebSocketResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/server/WebSocketResponse.class" afterDir="false" />
       <change beforePath="$USER_HOME$/README.md" beforeDir="false" />
       <change beforePath="$USER_HOME$/WillDunn/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/WillDunn/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/WillDunn/Errors.cpp" beforeDir="false" afterPath="$USER_HOME$/WillDunn/Errors.cpp" afterDir="false" />
@@ -773,16 +773,6 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>system</find>
-      <find>static</find>
-      <find>200</find>
-      <find>system.</find>
-      <find>dataIn.</find>
-      <find>wake</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -875,7 +865,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538063195845</updated>
-      <workItem from="1577913329347" duration="681000" />
+      <workItem from="1577913329347" duration="1524000" />
     </task>
     <servers />
   </component>
@@ -890,6 +880,22 @@
       <screen x="-847" y="-1669" width="3008" height="1669" />
     </state>
     <state x="-260" y="-977" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.797/-847.-1669.3008.1669@-847.-1669.3008.1669" timestamp="1577913359715" />
+    <state width="1464" height="238" key="GridCell.Tab.0.bottom" timestamp="1577914863362">
+      <screen x="-847" y="-1669" width="3008" height="1669" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.0.bottom/0.23.1440.797/-847.-1669.3008.1669@-847.-1669.3008.1669" timestamp="1577914863362" />
+    <state width="1464" height="238" key="GridCell.Tab.0.center" timestamp="1577914863360">
+      <screen x="-847" y="-1669" width="3008" height="1669" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.0.center/0.23.1440.797/-847.-1669.3008.1669@-847.-1669.3008.1669" timestamp="1577914863360" />
+    <state width="1464" height="238" key="GridCell.Tab.0.left" timestamp="1577914863359">
+      <screen x="-847" y="-1669" width="3008" height="1669" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.0.left/0.23.1440.797/-847.-1669.3008.1669@-847.-1669.3008.1669" timestamp="1577914863359" />
+    <state width="1464" height="238" key="GridCell.Tab.0.right" timestamp="1577914863361">
+      <screen x="-847" y="-1669" width="3008" height="1669" />
+    </state>
+    <state width="1464" height="238" key="GridCell.Tab.0.right/0.23.1440.797/-847.-1669.3008.1669@-847.-1669.3008.1669" timestamp="1577914863361" />
     <state x="-438" y="-1040" key="com.intellij.ide.util.TipDialog" timestamp="1577913338240">
       <screen x="-847" y="-1669" width="3008" height="1669" />
     </state>

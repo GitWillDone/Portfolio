@@ -12,10 +12,10 @@ import java.util.HashMap;
  * connection with that client.
  * To connect you must enter the local host 8080 followed by the resource request.  The chatroom is /ex.html
  * Overall, you should type localhost:8080/ex.html                  <-------- to connect
+ * By default, no resource request will bring you to ex.html
  */
 public class ServerUtil {
     private static HashMap<String, Room> userRoomMap = new HashMap<>();
-//    private static Connection connection;
 
     public static void main(String[] args) throws IOException {
         //open the server socket on the localhost port 8080
@@ -23,27 +23,6 @@ public class ServerUtil {
         serverSocketChannel.socket().bind(new InetSocketAddress(8080));
         serverSocketChannel.configureBlocking(true); //block the serversocketchannel or else it will jump to start when created
 
-//        try {
-//            //TODO you must run this at least once!!!
-//            //create database file
-//            connection = DriverManager.getConnection("jdbc:sqlite:chatHistory.db");
-//            Statement statement = connection.createStatement();
-//            String template = "CREATE TABLE chatHistory (\n" + "room text,\n" + "user text,\n" + "msg text\n" + ");";
-//            //insert into the file
-//            String message = "INSERT INTO chatHistory(room, user, message) VALUES('room', 'will', 'start')";
-//            statement.executeUpdate(message);
-//            statement.close();
-//            Statement statement2 = connection.createStatement(); //you must first create the statement, then do the query
-//            ResultSet rs = statement2.executeQuery("SELECT * FROM chatHistory");
-//            while(rs.next()){
-//                System.out.println(rs.getString("room"));
-//                System.out.println(rs.getString("user"));
-//                System.out.println(rs.getString("message"));
-//            }
-//
-//        } catch (SQLException e){
-//            e.getSQLState();
-//        }
 
         //must wrap in a while(true) because the machine is essentially listening for requests for connections to occur
         while (true) {
@@ -74,6 +53,8 @@ public class ServerUtil {
                             userRoomMap.put(response.getRoomName(), chatroom);
                             chatroom.addClient(client);
                             chatroom.listenForClient();
+                        } catch (FileNotFoundException eFNF) {
+                            System.out.println("Client entered an unavailable resource");
                         } catch (IOException e) {
                             e.printStackTrace();
                         }

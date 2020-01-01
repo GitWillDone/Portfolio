@@ -15,13 +15,17 @@ public class HTTPResponse {
     public HTTPResponse(HTTPRequest request, Socket clientSocket) {
         String header;
 
+        if (request.getFileName().equals("/")){
+            request.setFileName("/ex.html");
+        }
+
         try {
             OutputStream clientOutput = clientSocket.getOutputStream();
 
             file = new File("./resources" + request.getFileName());
 
-            if(file.exists()){
-                FileInputStream fis = new FileInputStream(file); //TODO combine these two if you don't end up using fix for anything else
+            if (file.exists()) {
+                FileInputStream fis = new FileInputStream(file);
                 BufferedInputStream bis = new BufferedInputStream(fis);
 
                 header = "HTTP/1.1 200 OK\r\n";
@@ -30,14 +34,15 @@ public class HTTPResponse {
                 clientOutput.write(contentLength.getBytes());
                 clientOutput.write("\r\n\r\n".getBytes());
 
-                byte[] content =  new byte[(int) file.length()];
+                byte[] content = new byte[(int) file.length()];
                 bis.read(content);
                 clientOutput.write(content);
             } else {
                 header = "HTTP/1.1 404 Not Found";
                 clientOutput.write(header.getBytes());
             }
-
+        } catch (FileNotFoundException eFNF) {
+            System.out.println("Client requested a resource which doesn't exist.");
         } catch (IOException e) {
             e.printStackTrace();
         }

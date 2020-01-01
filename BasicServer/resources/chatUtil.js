@@ -5,12 +5,11 @@ window.onload = function () {
     ///test works in conjunction with the onopen(callback) to load the prior messages.  The username will show up as "You"
     //instead of the actual name entered at the login screen.
     function test(event) {
-        //console.log(event);
         if (event != undefined) {
             let temp = JSON.parse(event.data);
             chat = document.getElementById('chat');
-            //alters the alignment and changes name to "You" for identification
-            if (temp.user == username) {
+
+            if (temp.user == username) { //alters the alignment and changes name to "You" for identification
                 temp.user = "You";
                 chat.value += "\n" + temp.user + ": " + temp.message + "\n";
             } else {
@@ -41,12 +40,6 @@ window.onload = function () {
         xhr.addEventListener("load", setPage);
         xhr.open("GET", "body.html");
         xhr.send();
-
-
-//         mySocket.onopen = function () {
-//             mySocket.send("join " + chatroom);
-//             mySocket.onmessage = test;
-//         }
 
         onopen(test);
 

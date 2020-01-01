@@ -44,10 +44,6 @@ public class HTTPRequest {
                 }
             }
             isWebSocket = headerMap.containsKey("Sec-WebSocket-Key");
-//            if(headerMap.containsKey("Sec-WebSocket-Key")) {
-//                System.out.println("This is a WebSocket:  "+ isWebSocket);
-//                isWebSocket = true;
-//            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -67,4 +63,6 @@ public class HTTPRequest {
     public String getFileName() {
         return fileName;
     }
+
+    public void setFileName(String nuName) { fileName = nuName; }
 }
