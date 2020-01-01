@@ -10,6 +10,8 @@ import java.util.HashMap;
 /**
  * A TCP server that runs on port 8080.  When a client connects, it sends the client the current date and time, then closes the
  * connection with that client.
+ * To connect you must enter the local host 8080 followed by the resource request.  The chatroom is /ex.html
+ * Overall, you should type localhost:8080/ex.html                  <-------- to connect
  */
 public class ServerUtil {
     private static HashMap<String, Room> userRoomMap = new HashMap<>();
